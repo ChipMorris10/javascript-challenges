@@ -17,28 +17,68 @@ valley: function() {
   return ('___');
 },
 
-// peaks: function(a) {
+// peaks: function() {
+//   return ('/\\/\\/\\');
+// },
+
+// refactored code
+peaks: function(a) {
+  var string = '';
+  for(var i=0; i<a; i++)
+    string += '/\\';
+    return string;
+},
+
+// OR
+// peaks: function(char) {
 //   var string = '';
-//   while(a) {
-//     string = '/\\';
-//     a--;
+//   while(char) {
+//     string += '/\\';
+//     char--;
 //   }
 //   return string;
 // },
 
 
-peaks: function() {
-  return ('/\\/\\/\\');
+// valleys: function() {
+//   return ('______');
+// },
+
+
+valleys: function(a) {
+  var string = '';
+  while(a) {
+    string += '___';
+    a--;
+  }
+  return string;
 },
 
-valleys: function() {
-  return ('______');
-},
+// This doesn't work and I don't know why.
+// valleys: function(a) {
+//   var string = '';
+//   for(var i=0; i<a; i++);
+//     string += '_';
+//     return string;
+// },
 
 peaksAndValleys: function() {
   return('/\\/\\___');
 },
 
+peaksAndValleys: function(a, b){
+    var string1 = '';
+    var string2 = '';
+    while (a) {
+      string1 += '/\\';
+      a--;
+    }
+    while (b) {
+      string2 += '___';
+      b--;
+    }
+    return string1 + string2;
+  },
 
 
 
